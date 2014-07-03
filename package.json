@@ -1,26 +1,33 @@
 {
-  "name": "tinyvents.js",
+  "name": "tinyvents",
   "version": "0.0.1",
   "homepage": "https://github.com/devgeeks/tinyvents.js",
   "description": "A very small and simple lib to attach events to plain JavaScript objects. Based on https://github.com/jeromeetienne/microevent.js",
   "keywords": [
-      "events",
-      "browser",
-      "bind",
-      "observe"
-    ],
+    "events",
+    "browser",
+    "bind",
+    "observe"
+  ],
   "repository": {
-      "type": "git",
-      "url": "git@github.com:devgeeks/tinyvents.js.git"
-    },
+    "type": "git",
+    "url": "git@github.com:devgeeks/tinyvents.js.git"
+  },
   "bugs": {
-      "url": "https://github.com/devgeeks/tinyvents.js/issues",
-      "email": "tommy@devgeeks.org"
-    },
+    "url": "https://github.com/devgeeks/tinyvents.js/issues",
+    "email": "tommy@devgeeks.org"
+  },
   "author": {
-      "name": "tommy-carlos williams",
-      "email": "tommy@devgeeks.org",
-      "url": "http://devgeeks.org"
-    },
-  "license": "MIT"
+    "name": "tommy-carlos williams",
+    "email": "tommy@devgeeks.org",
+    "url": "http://devgeeks.org"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
 }
