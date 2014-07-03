@@ -10,7 +10,7 @@ Inspired by / based on https://github.com/jeromeetienne/microevent.js
 
 The MIT License (MIT)
 
-Copyright (c) 2011 Jerome Etienne, http://jetienne.com
+Copyright (c) 2011 Jerome Etienne, http://jetienne.com  
 Copyright (c) 2014 tommy-carlos williams
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
