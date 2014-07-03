@@ -1,7 +1,7 @@
 {
   "name": "tinyvents",
   "version": "0.0.1",
-  "homepage": "https://github.com/devgeeks/tinyvents.js",
+  "homepage": "https://github.com/devgeeks/tinyvents",
   "description": "A very small and simple lib to attach events to plain JavaScript objects. Based on https://github.com/jeromeetienne/microevent.js",
   "keywords": [
     "events",
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:devgeeks/tinyvents.js.git"
+    "url": "git@github.com:devgeeks/tinyvents.git"
   },
   "bugs": {
-    "url": "https://github.com/devgeeks/tinyvents.js/issues",
+    "url": "https://github.com/devgeeks/tinyvents/issues",
     "email": "tommy@devgeeks.org"
   },
   "author": {
