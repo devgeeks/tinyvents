@@ -1,7 +1,9 @@
-tinyvents.js
+tinyvents
 ============
 
-A very small and simple lib to attach events to plain JavaScript objects. Based on https://github.com/jeromeetienne/microevent.js
+A very small and simple lib to attach events to plain JavaScript objects.
+
+Inspired by / based on https://github.com/jeromeetienne/microevent.js
 
 
 ## LICENSE
