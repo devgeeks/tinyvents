@@ -67,15 +67,15 @@
       });
 
       it("should be able to add an event listener", function() {
-        var _event = testObject._events['onEvent'];
-        (_event.length).should.equal(1);
+        var _tinyvent = testObject._tinyvents['onEvent'];
+        (_tinyvent.length).should.equal(1);
       });
 
       it ("should add the testCallback to the listener", function() {
-        var _event = testObject._events['onEvent'];
-        (_event.length).should.equal(1);
-        (typeof _event[0]).should.equal('function');
-        (_event[0] === testCallback).should.be.ok;
+        var _tinyvent = testObject._tinyvents['onEvent'];
+        (_tinyvent.length).should.equal(1);
+        (typeof _tinyvent[0]).should.equal('function');
+        (_tinyvent[0] === testCallback).should.be.ok;
       });
 
     });
@@ -95,14 +95,14 @@
       });
 
       it("should be able to add a once-only event listener", function() {
-        var _event = testObject._events['onceEvent'];
-        (_event.length).should.equal(1);
+        var _tinyvent = testObject._tinyvents['onceEvent'];
+        (_tinyvent.length).should.equal(1);
       });
 
       it ("should add the once-only testCallback to the listener", function() {
-        var _event = testObject._events['onceEvent'];
-        (_event.length).should.equal(1);
-        (typeof _event[0]).should.equal('function');
+        var _tinyvent = testObject._tinyvents['onceEvent'];
+        (_tinyvent.length).should.equal(1);
+        (typeof _tinyvent[0]).should.equal('function');
       });
 
     });
@@ -122,22 +122,22 @@
 
       it("should be able to remove a named event listener", function() {
         testObject.on('offEvent', testCallback);
-        var _event = testObject._events['offEvent'];
-        (_event.length).should.equal(1);
-        (typeof _event[0]).should.equal('function');
+        var _tinyvent = testObject._tinyvents['offEvent'];
+        (_tinyvent.length).should.equal(1);
+        (typeof _tinyvent[0]).should.equal('function');
         testObject.off('offEvent', testCallback);
-        (typeof _event[0]).should.equal('undefined');
+        (typeof _tinyvent[0]).should.equal('undefined');
       });
 
       it("should be able to remove all event listeners", function() {
         testObject.on('offEvent', testCallback);
         testObject.on('offEvent', function() { console.log(1); });
-        var _event = testObject._events['offEvent'];
-        (_event.length).should.equal(2);
-        (typeof _event[0]).should.equal('function');
+        var _tinyvent = testObject._tinyvents['offEvent'];
+        (_tinyvent.length).should.equal(2);
+        (typeof _tinyvent[0]).should.equal('function');
         testObject.off('offEvent');
-        (_event.length).should.not.be.ok;
-        (typeof _event[0]).should.equal('undefined');
+        (_tinyvent.length).should.not.be.ok;
+        (typeof _tinyvent[0]).should.equal('undefined');
       });
 
     });
