@@ -13,9 +13,13 @@ Include the `tinyvents.js` or `tinyvents.min.js` file in your html:
 
     <script src="tinyvents.js"></script>
 
-...or in node.js:
+Or in node.js:
 
-    var Tinyvents = require('./tinyvents.js').Tinyvents;
+    npm install tinyvents
+
+...then in your app:
+
+    var Tinyvents = require('tinyvents').Tinyvents;
 
 #### Tinyvents.observe() `Tinyvents.observe(Foobar);`
 
