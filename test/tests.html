@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <!-- Testing apparatus -->
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/should/should.js"></script>
+    <script src="../lib/tinyvents.js"></script>
+    <!-- initialize mocha/chai/etc -->
+    <script>
+      mocha.ui('bdd');
+      mocha.reporter('html');
+      mocha.setup({ignoreLeaks: true});
+    </script>
+    <script src="tests.js"></script>
+    <script>
+      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+    </script>
+  </body>
+</html>
