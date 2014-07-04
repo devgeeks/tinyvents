@@ -1,6 +1,8 @@
 tinyvents
 ============
 
+[![Build Status](https://travis-ci.org/devgeeks/tinyvents.svg?branch=master)](https://travis-ci.org/devgeeks/tinyvents)
+
 A very small and simple lib to attach events to plain JavaScript objects.
 
 Inspired by / based on https://github.com/jeromeetienne/microevent.js
