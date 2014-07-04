@@ -26,7 +26,7 @@ pattern:
 
 `Foobar` now has methods for `.on()`, `once()`, `off()`, and `trigger()`.
 
-### .on() `Foobar.on(event, callback);`
+#### .on() `Foobar.on(event, callback);`
 
 Adds a listener for an event called "change", and when triggered calls the
 callback function with any arguments
@@ -35,7 +35,7 @@ callback function with any arguments
       console.log("my event triggered: " + arg1);
     });
 
-### .once() `Foobar.once(event, callback);`
+#### .once() `Foobar.once(event, callback);`
 
 Adds a listener for an event called "myevent", and when triggered calls the
 callback function with any arguments. This is only called once and any subsequent 
@@ -45,7 +45,7 @@ callback function with any arguments. This is only called once and any subsequen
       console.log("my event fired once: " + arg1);
     });
 
-### .off() `Foobar.off(event [, callback]);`
+#### .off() `Foobar.off(event [, callback]);`
 
 Removes a listener for an event with a specified callback if the callback is specified.
 
@@ -55,13 +55,13 @@ Removes a listener for an event with a specified callback if the callback is spe
 
     Foobar('myevent');
 
-### .trigger() `Foobar.trigger(event [, arg1, arg2, arg3, ...])`
+#### .trigger() `Foobar.trigger(event [, arg1, arg2, arg3, ...])`
 
 Triggers an event and optionally passes any number of arguments.
 
     Foobar.trigger('myevent', Date.now());
 
-### Aliases
+#### Aliases
 
 For convenience, the following methods have the following aliases:
 
