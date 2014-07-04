@@ -17,7 +17,7 @@ Include the `tinyvents.js` or `tinyvents.min.js` file in your html:
 
     var Tinyvents = require('./tinyvents.js').Tinyvents;
 
-### Tinyvents.observe() `Tinyvents.observe(Foobar);`
+#### Tinyvents.observe() `Tinyvents.observe(Foobar);`
 
 Suppose you have a class `Foobar`, and you would like it to support the observer 
 pattern:
