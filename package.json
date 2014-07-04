@@ -23,6 +23,9 @@
     "url": "http://devgeeks.org"
   },
   "license": "MIT",
+  "scripts": {
+    "test": "grunt test"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.4.0",

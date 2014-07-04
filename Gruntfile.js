@@ -92,4 +92,6 @@ module.exports = function(grunt) {
     'mocha_phantomjs'
   ]);
 
+  grunt.registerTask('test', ['jshint', 'mochaTest', 'mocha_phantomjs']);
+
 };
