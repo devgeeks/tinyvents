@@ -21,49 +21,49 @@ Or in node.js:
 
     var Tinyvents = require('tinyvents').Tinyvents;
 
-#### Tinyvents.observe() `Tinyvents.observe(Foobar);`
+#### Tinyvents.mixin() `Tinyvents.mixin(MyModule);`
 
-Suppose you have a class `Foobar`, and you would like it to support the observer 
+Suppose you have a module (JavaScript object or function) `MyModule`, and you would like it to support the observer 
 pattern:
 
-    Tinyvents.observe(Foobar);
+    Tinyvents.mixin(MyModule);
 
-`Foobar` now has methods for `.on()`, `once()`, `off()`, and `trigger()`.
+`MyModule` now has methods for `.on()`, `once()`, `off()`, and `trigger()`.
 
-#### .on() `Foobar.on(event, callback);`
+#### .on() `MyModule.on(event, callback);`
 
 Adds a listener for an event called "change", and when triggered calls the
 callback function with any arguments
 
-    Foobar.on('myevent', function(arg1) {
+    MyModule.on('myevent', function(arg1) {
       console.log("my event triggered: " + arg1);
     });
 
-#### .once() `Foobar.once(event, callback);`
+#### .once() `MyModule.once(event, callback);`
 
 Adds a listener for an event called "myevent", and when triggered calls the
 callback function with any arguments. This is only called once and any subsequent 
 "myevent" events will not trigger the callback.
 
-    Foobar.once('myevent', function(arg1) {
+    MyModule.once('myevent', function(arg1) {
       console.log("my event fired once: " + arg1);
     });
 
-#### .off() `Foobar.off(event [, callback]);`
+#### .off() `MyModule.off(event [, callback]);`
 
 Removes a listener for an event with a specified callback if the callback is specified.
 
-    Foobar.off('myevent', myEventCallback);
+    MyModule.off('myevent', myEventCallback);
 
 ...or removes ALL listeners for an event if no callback specified.
 
-    Foobar('myevent');
+    MyModule('myevent');
 
-#### .trigger() `Foobar.trigger(event [, arg1, arg2, arg3, ...])`
+#### .trigger() `MyModule.trigger(event [, arg1, arg2, arg3, ...])`
 
 Triggers an event and optionally passes any number of arguments.
 
-    Foobar.trigger('myevent', Date.now());
+    MyModule.trigger('myevent', Date.now());
 
 #### Aliases
 

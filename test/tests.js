@@ -16,12 +16,12 @@
 
   describe("Tinyvents", function() {
 
-    it("should have an observe method to mixin with the object", function() {
-      (Tinyvents.observe).should.be.ok;
-      (typeof Tinyvents.observe).should.equal('function');
+    it("should have an mixin method to mixin with the object", function() {
+      (Tinyvents.mixin).should.be.ok;
+      (typeof Tinyvents.mixin).should.equal('function');
     });
 
-    describe("#observe()", function() {
+    describe("#mixin()", function() {
 
       var testObject;
 
@@ -29,10 +29,10 @@
         testObject = {
           foo: 'bar'
         };
-        Tinyvents.observe(testObject);
+        Tinyvents.mixin(testObject);
       });
 
-      it("should be able to observe the testObject", function() {
+      it("should be able to mixin the testObject", function() {
         (testObject.on).should.be.ok;
         (testObject.on).should.equal(Tinyvents.prototype.on);
         (testObject.once).should.be.ok;
@@ -61,7 +61,7 @@
         testObject = {
           foo: 'bar'
         };
-        Tinyvents.observe(testObject);
+        Tinyvents.mixin(testObject);
         testCallback = function testCallback() {};
         testObject.on('onEvent', testCallback);
       });
@@ -89,7 +89,7 @@
         testObject = {
           foo: 'bar'
         };
-        Tinyvents.observe(testObject);
+        Tinyvents.mixin(testObject);
         testCallback = function testCallback() {};
         testObject.once('onceEvent', testCallback);
       });
@@ -116,7 +116,7 @@
         testObject = {
           foo: 'bar'
         };
-        Tinyvents.observe(testObject);
+        Tinyvents.mixin(testObject);
         testCallback = function testCallback() {};
       });
 
@@ -150,7 +150,7 @@
         testObject = {
           foo: 'bar'
         };
-        Tinyvents.observe(testObject);
+        Tinyvents.mixin(testObject);
       });
 
       it("should be able to trigger an event listener callback", function(done) {
