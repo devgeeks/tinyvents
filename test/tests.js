@@ -1,4 +1,4 @@
-/*jshint expr:true */
+/*jshint expr:true*/
 /* global window, require, describe, it, beforeEach, console */
 (function(){
   'use strict';
@@ -8,7 +8,7 @@
 
   if (typeof window === 'undefined') {
     should = require('should');
-    Tinyvents = require('../lib/tinyvents.js').Tinyvents;
+    Tinyvents = require('../lib/tinyvents.js');
   } else {
     should = window.should;
     Tinyvents = window.Tinyvents;
@@ -67,12 +67,12 @@
       });
 
       it("should be able to add an event listener", function() {
-        var _tinyvent = testObject._tinyvents['onEvent'];
+        var _tinyvent = testObject._tinyvents.onEvent;
         (_tinyvent.length).should.equal(1);
       });
 
       it ("should add the testCallback to the listener", function() {
-        var _tinyvent = testObject._tinyvents['onEvent'];
+        var _tinyvent = testObject._tinyvents.onEvent;
         (_tinyvent.length).should.equal(1);
         (typeof _tinyvent[0]).should.equal('function');
         (_tinyvent[0] === testCallback).should.be.ok;
@@ -95,12 +95,12 @@
       });
 
       it("should be able to add a once-only event listener", function() {
-        var _tinyvent = testObject._tinyvents['onceEvent'];
+        var _tinyvent = testObject._tinyvents.onceEvent;
         (_tinyvent.length).should.equal(1);
       });
 
       it ("should add the once-only testCallback to the listener", function() {
-        var _tinyvent = testObject._tinyvents['onceEvent'];
+        var _tinyvent = testObject._tinyvents.onceEvent;
         (_tinyvent.length).should.equal(1);
         (typeof _tinyvent[0]).should.equal('function');
       });
@@ -122,7 +122,7 @@
 
       it("should be able to remove a named event listener", function() {
         testObject.on('offEvent', testCallback);
-        var _tinyvent = testObject._tinyvents['offEvent'];
+        var _tinyvent = testObject._tinyvents.offEvent;
         (_tinyvent.length).should.equal(1);
         (typeof _tinyvent[0]).should.equal('function');
         testObject.off('offEvent', testCallback);
@@ -132,7 +132,7 @@
       it("should be able to remove all event listeners", function() {
         testObject.on('offEvent', testCallback);
         testObject.on('offEvent', function() { console.log(1); });
-        var _tinyvent = testObject._tinyvents['offEvent'];
+        var _tinyvent = testObject._tinyvents.offEvent;
         (_tinyvent.length).should.equal(2);
         (typeof _tinyvent[0]).should.equal('function');
         testObject.off('offEvent');

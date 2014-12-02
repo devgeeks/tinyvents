@@ -19,7 +19,7 @@ Or in node.js:
 
 ...then in your app:
 
-    var Tinyvents = require('tinyvents').Tinyvents;
+    var Tinyvents = require('tinyvents');
 
 #### Tinyvents.mixin() `Tinyvents.mixin(MyModule);`
 
